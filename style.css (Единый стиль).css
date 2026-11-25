@@ -1,0 +1,393 @@
+/* ===== Базовые настройки ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #d4738a;
+  --pink-dark: #b85770;
+  --cream: #fdf8f5;
+  --dark: #4a3f4a;
+  --green: #7a9471;
+  --border: #f0e2e0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark);
+  background: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== Шапка ===== */
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--dark);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav__link:hover {
+  background: var(--cream);
+  color: var(--pink-dark);
+}
+
+.nav__link--active {
+  background: var(--pink);
+  color: #fff;
+}
+
+/* ===== Кнопки ===== */
+.btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 32px;
+  border-radius: 30px;
+  border: 2px solid var(--pink);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--pink-dark);
+}
+
+.btn--outline:hover {
+  background: var(--pink-dark);
+  color: #fff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #fdf0ee 0%, #fce8ec 100%);
+  padding: 80px 0;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__text {
+  flex: 1;
+}
+
+.hero__text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.hero__text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #6b5f6b;
+  max-width: 480px;
+}
+
+.hero__art {
+  flex: 1;
+  font-size: 11rem;
+  text-align: center;
+  line-height: 1;
+}
+
+/* ===== Секции ===== */
+.section {
+  padding: 70px 0;
+}
+
+.section--accent {
+  background: var(--cream);
+}
+
+.section__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--dark);
+}
+
+.section__title--left {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.page-head {
+  background: linear-gradient(135deg, #fdf0ee 0%, #fce8ec 100%);
+  padding: 55px 0;
+  text-align: center;
+}
+
+.page-head h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.page-head p {
+  color: #6b5f6b;
+  font-size: 1.1rem;
+}
+
+/* ===== Фичи ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature__icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--pink-dark);
+}
+
+.feature p {
+  color: #6b5f6b;
+}
+
+/* ===== Карточки ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px 22px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(212, 115, 138, 0.15);
+}
+
+.card__img {
+  font-size: 4.5rem;
+  margin-bottom: 16px;
+}
+
+.card__title {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.card__desc {
+  font-size: 0.9rem;
+  color: #8a7e8a;
+  margin-bottom: 12px;
+}
+
+.card__price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+}
+
+/* ===== Контакты ===== */
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-list span {
+  font-size: 1.3rem;
+}
+
+.contacts__note {
+  color: #6b5f6b;
+  font-style: italic;
+}
+
+/* ===== Форма ===== */
+.form {
+  background: var(--cream);
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: var(--dark);
+  transition: border-color 0.2s;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--pink);
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ===== Подвал ===== */
+.footer {
+  background: var(--dark);
+  color: #e8dfe5;
+  padding: 30px 0;
+  margin-top: 20px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 900px) {
+  .features,
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero__text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero__art {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero__inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero__text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
